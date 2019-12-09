@@ -31,13 +31,13 @@ class CatogeryAdapter(context:Context, categories:List<Category>):BaseAdapter() 
            holder.categoryImage= categoryView.findViewById(R.id.Categoryimage)
            holder.categoryName =  categoryView.findViewById(R.id.catogeryName)
 
-            println("I exit for first time")
+            //println("I exit for first time")
             categoryView.tag=holder
 
         }else{
             holder= convertView.tag as ViewHolder
             categoryView =convertView
-            println("go green, recycle!")
+           // println("go green, recycle!")
         }
 
 
