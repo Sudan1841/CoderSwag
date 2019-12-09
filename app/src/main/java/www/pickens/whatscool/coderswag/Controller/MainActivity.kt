@@ -8,19 +8,18 @@ import kotlinx.android.synthetic.main.activity_main.*
 import www.pickens.whatscool.coderswag.Model.Category
 import www.pickens.whatscool.coderswag.R
 import www.pickens.whatscool.coderswag.Services.DataService
+import www.pickens.whatscool.coderswag.adapter.CatogeryAdapter
 
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var  adapter: ArrayAdapter<Category>
+    lateinit var  adapter: CatogeryAdapter
 
             override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-                adapter = ArrayAdapter(this,
-                    android.R.layout.simple_list_item_1,
-                   DataService.Categories)
+                adapter = CatogeryAdapter(this, DataService.Categories)
 
                 catogoryListview.adapter = adapter
     }
