@@ -17,11 +17,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/catogoryListview"
         android:layout_below="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="-1dp"
         tools:layout_editor_absoluteX="5dp"
         tools:layout_editor_absoluteY="61dp" />
 

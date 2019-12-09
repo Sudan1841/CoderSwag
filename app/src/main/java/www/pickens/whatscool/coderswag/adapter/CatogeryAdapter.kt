@@ -78,6 +78,7 @@ class CatogeryAdapter(context:Context, categories:List<Category>):BaseAdapter() 
     override fun getCount(): Int {
         return  categories.count()
     }
+    //create viewholder this
     private class ViewHolder{
        var categoryImage: ImageView? = null
         var categoryName: TextView? = null
