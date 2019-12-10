@@ -12,13 +12,7 @@ import www.pickens.whatscool.coderswag.Model.Category
 import www.pickens.whatscool.coderswag.R
 import java.math.MathContext
 
-class CatogeryAdapter(context:Context, categories:List<Category>):BaseAdapter() {
-
-    val context = context
-    val categories = categories
-
-
-
+class CatogeryAdapter(val context: Context, val categories: List<Category>):BaseAdapter() {
 
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
@@ -31,13 +25,13 @@ class CatogeryAdapter(context:Context, categories:List<Category>):BaseAdapter() 
            holder.categoryImage= categoryView.findViewById(R.id.Categoryimage)
            holder.categoryName =  categoryView.findViewById(R.id.catogeryName)
 
-            println("I exit for first time")
+            //println("I exit for first time")
             categoryView.tag=holder
 
         }else{
             holder= convertView.tag as ViewHolder
             categoryView =convertView
-            println("go green, recycle!")
+           // println("go green, recycle!")
         }
 
 
@@ -78,6 +72,7 @@ class CatogeryAdapter(context:Context, categories:List<Category>):BaseAdapter() 
     override fun getCount(): Int {
         return  categories.count()
     }
+    //create viewholder this
     private class ViewHolder{
        var categoryImage: ImageView? = null
         var categoryName: TextView? = null

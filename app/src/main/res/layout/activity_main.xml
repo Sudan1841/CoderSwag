@@ -6,23 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".Controller.MainActivity">
 
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="53dp"
-        android:text="Hello World!"
+        android:layout_width="335dp"
+        android:layout_height="68dp"
+        android:text="@string/textTitle"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="36sp"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="30sp"
 
-    <ListView
+        android:layout_marginLeft="80dp"
+        android:textAlignment="center" />
+
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/catogoryListview"
         android:layout_below="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="-1dp"
         tools:layout_editor_absoluteX="5dp"
         tools:layout_editor_absoluteY="61dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="85dp"
+        android:layout_above="@id/catogoryListview"
+
+
+        android:layout_height="68dp"
+        android:layout_marginBottom="-1dp"
+        app:srcCompat="@drawable/hat3" />
 
 </RelativeLayout>
