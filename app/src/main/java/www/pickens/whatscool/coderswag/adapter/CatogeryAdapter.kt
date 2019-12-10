@@ -12,13 +12,7 @@ import www.pickens.whatscool.coderswag.Model.Category
 import www.pickens.whatscool.coderswag.R
 import java.math.MathContext
 
-class CatogeryAdapter(context:Context, categories:List<Category>):BaseAdapter() {
-
-    val context = context
-    val categories = categories
-
-
-
+class CatogeryAdapter(val context: Context, val categories: List<Category>):BaseAdapter() {
 
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
